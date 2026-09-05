@@ -1,0 +1,25 @@
+{
+  "name": "PixelHR",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Standalone Playwright and Cucumber automation project for PixelHR",
+  "scripts": {
+    "test:all": "cucumber-js --config cucumber.js \"feature/**/*.feature\"",
+    "test:smoke": "cucumber-js --config cucumber.js --tags '@smoke' \"feature/**/*.feature\"",
+    "test:login": "cucumber-js --config cucumber.js feature/loginPage.feature",
+    "test:homepage": "cucumber-js --config cucumber.js feature/homePage.feature",
+    "test:employeehub": "cucumber-js --config cucumber.js feature/employeeHub.feature",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.3.0",
+    "@playwright/test": "^1.54.0",
+    "@types/node": "^22.15.0",
+    "cross-env": "^7.0.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}
